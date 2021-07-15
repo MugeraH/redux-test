@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./Home.scss";
 
 import Loader from "../loader/Loader";
@@ -10,6 +11,7 @@ import { loadUsers } from "../../actions/usersAction";
 function Home() {
   const { users } = useSelector((state) => state.users);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -25,7 +27,13 @@ function Home() {
         {users ? (
           users.map((user, index) => {
             return (
-              <div className="user-wrapper" key={index}>
+              <div
+                onClick={() => {
+                  history.push(`user/${user.id}`);
+                }}
+                className="user-wrapper"
+                key={index}
+              >
                 <div>
                   <h4>{user.name}</h4>
                   <h5 className="role">{user.occupation}</h5>
