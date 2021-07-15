@@ -15,7 +15,6 @@ function Home() {
 
   useEffect(() => {
     dispatch(loadUsers());
-    console.log(users.length);
   }, [dispatch]);
   return (
     <div className="container">
@@ -24,7 +23,7 @@ function Home() {
         <FilterUsers />
       </div>
       <div className="user-container">
-        {users ? (
+        {users.length ? (
           users.map((user, index) => {
             return (
               <div

@@ -1,5 +1,6 @@
 const initialState = {
   users: [],
+  user: [],
 };
 
 const userReducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         users: action.payload.users,
+      };
+    case "GET_USER":
+      return {
+        ...state,
+        user: action.payload.user,
       };
     default:
       return { ...state };

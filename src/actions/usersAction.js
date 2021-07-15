@@ -12,3 +12,15 @@ export const loadUsers = () => async (dispatch) => {
     },
   });
 };
+
+export const loadUser = (id) => async (dispatch) =>{
+   const userData = await axios.get(`${base_url}/${id}`);
+
+   dispatch({
+     type: "GET_USER",
+     payload: {
+       user: userData.data,
+     },
+   });
+
+}

@@ -1,13 +1,12 @@
-import React from 'react'
-import "./UserDetail.scss"
+import React from "react";
+import "./UserDetail.scss";
 
 function UserDetail() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <h2>user detail</h2>
+    </div>
+  );
 }
 
-export default UserDetail
-
+export default UserDetail;
