@@ -10,6 +10,11 @@ const userReducer = (state = initialState, action) => {
         ...state,
         users: action.payload.users,
       };
+    case "FILTER_USERS":
+      return {
+        ...state,
+        users: action.payload.users,
+      };
     case "GET_USER":
       return {
         ...state,

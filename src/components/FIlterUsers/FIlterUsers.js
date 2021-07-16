@@ -1,13 +1,16 @@
 import React from "react";
 import "./FilterUsers.scss";
 
-import { useSelector, useDispatch } from "react-redux";
-import { loadUser, updateUser } from "../../actions/usersAction";
+import { useDispatch } from "react-redux";
+import { filterUsers } from "../../actions/usersAction";
 
 function FilterUsers() {
+  const dispatch = useDispatch();
   const handleOnChange = (e) => {
     e.preventDefault();
+    let count = e.target.value;
     console.log(e.target.value);
+    dispatch(filterUsers(count));
   };
   return (
     <div>
