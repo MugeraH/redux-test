@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
-import Loader from "../../components/loader/Loader";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import "./UserDetail.scss";
-import { useParams } from "react-router-dom";
+
 import { useSelector, useDispatch } from "react-redux";
 import { loadUser } from "../../actions/usersAction";
+
+
+import Loader from "../../components/loader/Loader";
+
 
 function UserDetail() {
   const { user } = useSelector((state) => state.users);

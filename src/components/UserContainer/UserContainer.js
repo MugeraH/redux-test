@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import "./UserContainer.scss";
 
 
 import { useSelector, useDispatch } from "react-redux";
 import { loadUsers } from "../../actions/usersAction";
 
 import Loader from "../../components/loader/Loader";
-import "./UserContainer.scss";
+
 
 
 function UserContainer() {
@@ -19,7 +20,7 @@ function UserContainer() {
       }, [dispatch]);
     return (
       <div className="user-container">
-        {users.length ? (
+        {users.name ? (
           users.map((user, index) => {
             return (
               <div

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import "./UpdateUser.scss";
 
-import { useHistory } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { loadUser, updateUser } from "../../actions/usersAction";
 

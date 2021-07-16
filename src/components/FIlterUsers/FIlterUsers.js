@@ -9,7 +9,7 @@ function FilterUsers() {
   const handleOnChange = (e) => {
     e.preventDefault();
     let count = e.target.value;
-    console.log(e.target.value);
+   
     dispatch(filterUsers(count));
   };
   return (
