@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import UserDetail from "./pages/UserDetail/UserDetail";
-import UpdateUser from "./pages/updateUser/UpdateUser";
+
+import UpdateUser from "./pages/UpdateUser/UpdateUser";
+
 
 function App() {
   return (
