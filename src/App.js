@@ -3,20 +3,27 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
+import UserDetail from "./pages/UserDetail/UserDetail";
+import UpdateUser from "./pages/updateUser/UpdateUser";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="user/:id">
-          <Home />
-        </Route>
-      </Switch>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/updateUser/:id">
+            <UpdateUser />
+          </Route>
+          <Route path="/user/:id">
+            <UserDetail />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }

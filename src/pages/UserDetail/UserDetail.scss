@@ -1,0 +1,49 @@
+.user-detail-container {
+  background: var(--grey);
+  padding: 3rem;
+  .user-detail-title {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
+
+    button {
+      color: var(--white);
+      background-color: var(--primary-light);
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0.7rem 0.5rem;
+      border: 1px solid var(--grey);
+      outline: none;
+      transition: all 400ms ease;
+
+      &:hover {
+        color: var(--primary-light);
+        background-color: var(--white);
+        border: 1px solid var(--primary-light);
+      }
+    }
+  }
+  .user-detail-username {
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  span {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.7rem 0;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 1.15rem;
+  }
+  .email,
+  .occupation {
+    font-size: 1.1rem;
+  }
+}

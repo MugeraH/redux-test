@@ -1,30 +1,26 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "./Home.scss";
+import "./UserContainer.scss";
 
-import Loader from "../loader/Loader";
-import FilterUsers from "../FIlterUsers/FIlterUsers";
 
 import { useSelector, useDispatch } from "react-redux";
 import { loadUsers } from "../../actions/usersAction";
 
-function Home() {
-  const { users } = useSelector((state) => state.users);
-  const dispatch = useDispatch();
-  const history = useHistory();
+import Loader from "../../components/loader/Loader";
 
-  useEffect(() => {
-    dispatch(loadUsers());
-    console.log(users.length);
-  }, [dispatch]);
-  return (
-    <div className="container">
-      <div className="title">
-        <h2>Users</h2>
-        <FilterUsers />
-      </div>
+
+
+function UserContainer() {
+      const { users } = useSelector((state) => state.users);
+      const dispatch = useDispatch();
+      const history = useHistory();
+
+      useEffect(() => {
+        dispatch(loadUsers());
+      }, [dispatch]);
+    return (
       <div className="user-container">
-        {users ? (
+        {users.length ? (
           users.map((user, index) => {
             return (
               <div
@@ -47,8 +43,8 @@ function Home() {
           <Loader />
         )}
       </div>
-    </div>
-  );
+    );
 }
 
-export default Home;
+export default UserContainer
+

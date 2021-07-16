@@ -1,23 +1,12 @@
-h2 {
-  margin-left: 50px;
-}
 .user-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
 }
-
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 .user-wrapper {
   width: 350px;
-  background: rgb(196, 196, 196);
+  background: var(--grey);
   border-radius: 7px;
   padding: 14px;
   cursor: pointer;
