@@ -4,7 +4,6 @@ let base_url = "https://ti-react-test.herokuapp.com/users";
 
 export const loadUsers = () => async (dispatch) => {
   const usersData = await axios.get(base_url);
-
   dispatch({
     type: "GET_USERS",
     payload: {
@@ -15,8 +14,6 @@ export const loadUsers = () => async (dispatch) => {
 
 export const filterUsers = (count) => async (dispatch) => {
   let usersData = await axios.get(base_url);
-  // let usersData = allUsersData.data.slice(0, count);
-
   dispatch({
     type: "FILTER_USERS",
     payload: {
@@ -27,7 +24,6 @@ export const filterUsers = (count) => async (dispatch) => {
 
 export const loadUser = (id) => async (dispatch) => {
   const userData = await axios.get(`${base_url}/${id}`);
-
   dispatch({
     type: "GET_USER",
     payload: {
@@ -37,13 +33,7 @@ export const loadUser = (id) => async (dispatch) => {
 };
 
 export const updateUser = (user) => async (dispatch) => {
-  let userData = [];
-  await axios
-    .patch(`${base_url}/${user.id}`, user)
-    .then((response) => (userData = response));
-
-  // const userData = await axios.get(`${base_url}/${user.id}`);
-
+  let userData = await axios.patch(`${base_url}/${user.id}`, user);
   dispatch({
     type: "UPDATE_USER",
     payload: {

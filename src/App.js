@@ -3,9 +3,9 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import UserDetail from "./components/UserDetail/UserDetail";
-import UpdateUser from "./components/updateUser/UpdateUser";
+import Home from "./pages/Home/Home";
+import UserDetail from "./pages/UserDetail/UserDetail";
+import UpdateUser from "./pages/updateUser/UpdateUser";
 
 function App() {
   return (

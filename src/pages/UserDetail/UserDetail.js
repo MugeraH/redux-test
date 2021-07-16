@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Loader from "../loader/Loader";
+import Loader from "../../components/loader/Loader";
 import { useHistory } from "react-router-dom";
 import "./UserDetail.scss";
 import { useParams } from "react-router-dom";
