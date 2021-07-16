@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import UserDetail from "./components/UserDetail/UserDetail";
+import UpdateUser from "./components/updateUser/UpdateUser";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/updateUser/:id">
+            <UpdateUser />
           </Route>
           <Route path="/user/:id">
             <UserDetail />

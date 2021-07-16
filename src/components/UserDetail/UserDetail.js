@@ -16,27 +16,27 @@ function UserDetail() {
     dispatch(loadUser(id));
   }, [dispatch, id]);
   return (
-    <div class="container">
+    <div className="container">
       {user ? (
-        <div class="user-detail-container">
-          <div class="user-detail-title">
-            <h2 class="user-detail-title">User</h2>
+        <div className="user-detail-container">
+          <div className="user-detail-title">
+            <h2 className="user-detail-title">User</h2>
             <button
               onClick={() => {
-                history.push(`updateUser/${user.id}`);
+                history.push(`/updateUser/${user.id}`);
               }}
             >
               Update
             </button>
           </div>
-          <h2 class="user-detail-username">{user.name}</h2>
+          <h2 className="user-detail-username">{user.name}</h2>
 
           <span>Bio</span>
-          <p class="bio">{user.bio}</p>
+          <p className="bio">{user.bio}</p>
           <span>Occupation</span>
-          <p class="occupation">{user.occupation}</p>
+          <p className="occupation">{user.occupation}</p>
           <span>Email</span>
-          <p class="email">{user.email}</p>
+          <p className="email">{user.email}</p>
         </div>
       ) : (
         <Loader />
