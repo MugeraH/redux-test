@@ -17,7 +17,7 @@ function UserDetail() {
   }, [dispatch, id]);
   return (
     <div className="container">
-      {user ? (
+      {user.name ? (
         <div className="user-detail-container">
           <div className="user-detail-title">
             <h2 className="user-detail-title">User</h2>

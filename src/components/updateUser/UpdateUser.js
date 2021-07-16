@@ -29,9 +29,16 @@ function UpdateUser() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    console.log(updatedUser);
-    dispatch(updateUser(updatedUser));
-    history.push(`/user/${user.id}`);
+    if (updatedUser) {
+      console.log("perform");
+
+      console.log(updatedUser);
+      //   dispatch(updateUser(updatedUser));
+      //   history.push(`/user/${user.id}`);
+    } else {
+      console.log("redirect");
+      //   history.push(`/user/${user.id}`);
+    }
   };
 
   return (
@@ -46,7 +53,7 @@ function UpdateUser() {
               <input
                 defaultValue={user.name}
                 id="username"
-                name="username"
+                name="name"
                 onChange={inputHandler}
                 type="text"
                 required

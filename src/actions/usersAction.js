@@ -25,11 +25,17 @@ export const loadUser = (id) => async (dispatch) => {
 };
 
 export const updateUser = (user) => async (dispatch) => {
+  let userData = [];
   await axios
     .patch(`${base_url}/${user.id}`, user)
-    .then((response) => console.log(response));
+    .then((response) => (userData = response));
+
+  // const userData = await axios.get(`${base_url}/${user.id}`);
 
   dispatch({
     type: "UPDATE_USER",
+    payload: {
+      user: userData.data,
+    },
   });
 };
