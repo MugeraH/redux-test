@@ -16,7 +16,7 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(
   rootReducer,
-  composeEnhancer(applyMiddleware(thunk)) //comibine dev tools and thunk in one line
+  composeEnhancer(applyMiddleware(thunk)) 
 );
 
 ReactDOM.render(
