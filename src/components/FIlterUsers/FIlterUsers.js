@@ -1,4 +1,8 @@
 import React from "react";
+import "./FilterUsers.scss";
+
+import { useSelector, useDispatch } from "react-redux";
+import { loadUser, updateUser } from "../../actions/usersAction";
 
 function FilterUsers() {
   const handleOnChange = (e) => {

@@ -13,6 +13,18 @@ export const loadUsers = () => async (dispatch) => {
   });
 };
 
+export const filterUsers = (count) => async (dispatch) => {
+  let allUsersData = await axios.get(base_url);
+  let usersData = allUsersData.slice(0, count);
+
+  dispatch({
+    type: "FILTER_USERS",
+    payload: {
+      users: usersData.data,
+    },
+  });
+};
+
 export const loadUser = (id) => async (dispatch) => {
   const userData = await axios.get(`${base_url}/${id}`);
 

@@ -30,14 +30,10 @@ function UpdateUser() {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     if (updatedUser) {
-      console.log("perform");
-
-      console.log(updatedUser);
-      //   dispatch(updateUser(updatedUser));
-      //   history.push(`/user/${user.id}`);
+      dispatch(updateUser(updatedUser));
+      history.push(`/user/${user.id}`);
     } else {
-      console.log("redirect");
-      //   history.push(`/user/${user.id}`);
+      history.push(`/user/${user.id}`);
     }
   };
 
