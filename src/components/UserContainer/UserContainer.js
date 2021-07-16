@@ -20,7 +20,7 @@ function UserContainer() {
       }, [dispatch]);
     return (
       <div className="user-container">
-        {users.name ? (
+        {users.length ? (
           users.map((user, index) => {
             return (
               <div
