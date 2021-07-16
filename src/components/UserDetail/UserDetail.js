@@ -14,16 +14,20 @@ function UserDetail() {
 
   useEffect(() => {
     dispatch(loadUser(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
   return (
     <div class="container">
       {user ? (
         <div class="user-detail-container">
           <div class="user-detail-title">
             <h2 class="user-detail-title">User</h2>
-            <button onClick={() => {
-                 history.push(`updateUser/${user.id}`);
-            }}>Update</button>
+            <button
+              onClick={() => {
+                history.push(`updateUser/${user.id}`);
+              }}
+            >
+              Update
+            </button>
           </div>
           <h2 class="user-detail-username">{user.name}</h2>
 
