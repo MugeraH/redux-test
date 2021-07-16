@@ -7,13 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { loadUser } from "../../actions/usersAction";
 
 function UpdateUser() {
-  const [updatedUser, setUpdatedUser] = useState({
-    username: "",
-    email: "",
-    occupation: "",
-    bio: "",
-  });
   const { user } = useSelector((state) => state.users);
+  const [updatedUser, setUpdatedUser] = useState(user);
+
   const dispatch = useDispatch();
   const history = useHistory();
   let { id } = useParams();
@@ -26,6 +22,7 @@ function UpdateUser() {
     const { name, value } = e.target;
     setUpdatedUser({
       ...updatedUser,
+      id: user.id,
       [name]: value,
     });
   };
