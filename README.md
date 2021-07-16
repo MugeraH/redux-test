@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# REDUX-TEST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+A react application that demonstrates use of redux for state management
+
+## Author
+
+[Mugera Hughes](https://github.com/mugerah/)
 
 ## Available Scripts
 
@@ -68,3 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+[MIT License](https://github.com/MugeraH/redux-test/blob/main/license)
+
+Copyright (c) 2021
