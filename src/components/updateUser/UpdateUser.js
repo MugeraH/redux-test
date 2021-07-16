@@ -4,11 +4,11 @@ import "./UpdateUser.scss";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { loadUser } from "../../actions/usersAction";
+import { loadUser, updateUser } from "../../actions/usersAction";
 
 function UpdateUser() {
   const { user } = useSelector((state) => state.users);
-  const [updatedUser, setUpdatedUser] = useState(user);
+  const [updatedUser, setUpdatedUser] = useState();
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -30,7 +30,8 @@ function UpdateUser() {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     console.log(updatedUser);
-    // history.push(`/user/${user.id}`);
+    dispatch(updateUser(updatedUser));
+    history.push(`/user/${user.id}`);
   };
 
   return (
@@ -77,8 +78,8 @@ function UpdateUser() {
               <label>Bio</label>
               <textarea
                 defaultValue={user.bio}
-                id="Bio"
-                name="Bio"
+                id="bio"
+                name="bio"
                 onChange={inputHandler}
                 required
               ></textarea>
